@@ -28,6 +28,7 @@ numbers=LightBlue1
 remarks=lightgreen  
 tabsize=2  
 autocopy=off  
+browser=firefox
 </code>
 
 Starting CSnips:
@@ -84,7 +85,7 @@ __Ctrl-q__				quit the application
 
 Selecting the text of a hyperlink and 
 then Right-Clicking it will open it
-in your default web browser.
+in the specified web browser.
 
 Obviously don't forget to backup
 the csnips.db Sqlite3 database file.

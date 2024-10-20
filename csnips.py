@@ -1,7 +1,7 @@
 '''
 csnips.py
 Yet Another Snippet Program
-Author: Michael D Leidel
+Author: Leidel
 Dec 2020
 
 To Run:
@@ -15,6 +15,7 @@ import webbrowser
 import sqlite3
 import os
 import sys
+import subprocess
 import threading
 import pyperclip
 from ttkthemes import ThemedTk  # ttkthemes is applied to all widgets
@@ -43,13 +44,14 @@ class Application(Frame):
     def __init__(self, parent):
         Frame.__init__(self, parent)
         self.pack(fill=BOTH, expand=True, padx=4, pady=8)
-        self.font_, self.size_, self.fg_, self.bg_, \
+        self.font_, self.size_, self.fg_, self.bg_, self.browser_, \
         self.cursor_, self.tab_, self.auto_, self.literals_, \
         self.remarks_, self.numbers_ = iniproc.read("csnips.ini",
                                                     'font',
                                                     'fontsize',
                                                     'fg',
                                                     'bg',
+                                                    'browser',
                                                     'cursorcolor',
                                                     'tabsize',
                                                     'autocopy',
@@ -304,7 +306,8 @@ class Application(Frame):
         else:
             return
         if txt.startswith("http"):
-            webbrowser.open(txt)  # open the URL
+            #webbrowser.open(txt)  # open the URL
+            subprocess.call([self.browser_, txt])
 
     def on_click_delete(self):
         ''' Delete the group or current snippet from the snippet db '''
