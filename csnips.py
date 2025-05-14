@@ -305,9 +305,8 @@ class Application(Frame):
             txt = self.code.selection_get()
         else:
             return
-        if txt.startswith("http"):
-            #webbrowser.open(txt)  # open the URL
-            subprocess.call([self.browser_, txt])
+        # this works with HTML URLs or Files and PDFs
+        subprocess.call([self.browser_, "https://www.google.com/search?q=" + txt])
 
     def on_click_delete(self):
         ''' Delete the group or current snippet from the snippet db '''

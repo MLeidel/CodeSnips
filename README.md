@@ -8,7 +8,8 @@ CodeSnips is actually a simple database manager for organizing code snipits
 where the table is keyed by topics and items. For instance, "Python" (topic), 
 and "Formating" (item).
 
-I comes with several topics with some items, but is really intended for you 
+The database comes with several topics with some items, 
+but is really intended for you 
 to go in and supply your own snipits (Topics, Items).
 
 The `csnips.ini` file allows for some customization:  
@@ -83,8 +84,8 @@ __Ctrl-a__				Select All
 __Ctrl-s__				Save  
 __Ctrl-q__				quit the application  
 
-Selecting the text of a hyperlink and 
-then Right-Clicking it will open it
+Selecting the text of a hyperlink or file, and 
+then Right-Clicking it, will open it
 in the specified web browser.
 
 Obviously don't forget to backup
